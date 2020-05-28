@@ -7,5 +7,7 @@ Documentation
 
 Use: 
 
+Output:
+
 Behind the scenes:
 
