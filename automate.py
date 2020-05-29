@@ -1,6 +1,6 @@
 #Author: Ketan Vasudeva
 #Purpose: Automated speedtest process for graphing and analytics
-#Version: 1.1
+#Version: 1.1.1
 #Date: May 28th, 2020
 #Update Note: Major patch. Graphing functionality fixed, matplotlib now automatically determines tick locations
 #             (customizable). The graph now also uses the real time of day (EST).
@@ -115,6 +115,7 @@ while(t_epoch < time_limit):
         figD, main_ax = plt.subplots()
         main_ax.plot(t, downloadData)
         main_ax.set_xlabel('Time (s)')
+        plt.xticks(rotation=90)
 
         #Customizable block to set custom y-axis boundaries. Default setting is set by matplotlib.
 
@@ -129,6 +130,7 @@ while(t_epoch < time_limit):
         #Upload Speed Plot
         figD, main_ax = plt.subplots()
         main_ax.plot(t, uploadData)
+        plt.xticks(rotation=90)
 
         #Customizable block to set custom y-axis boundaries. Default setting is set by matplotlib.
 
@@ -145,6 +147,7 @@ while(t_epoch < time_limit):
         #Latency Plot
         figD, main_ax = plt.subplots()
         main_ax.plot(t, latencyData)
+        plt.xticks(rotation=90)
 
         #Customizable block to set custom y-axis boundaries. Default setting is set by matplotlib.
 
@@ -161,6 +164,7 @@ while(t_epoch < time_limit):
         #Jitter Plot
         figD, main_ax = plt.subplots()
         main_ax.plot(t, jitterData)
+        plt.xticks(rotation=90)
 
         #Customizable block to set custom y-axis boundaries. Default setting is set by matplotlib.
 
